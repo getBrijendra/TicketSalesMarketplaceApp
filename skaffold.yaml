@@ -8,7 +8,7 @@ build:
   local:
     push: false
   artifacts:
-    - image: ticketingapp/auth
+    - image: cygnetops/auth
       context: auth
       docker:
         dockerfile: Dockerfile
@@ -16,7 +16,7 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: ticketingapp/client
+    - image: cygnetops/ticketing-client
       context: client
       docker:
         dockerfile: Dockerfile

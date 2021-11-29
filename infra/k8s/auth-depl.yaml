@@ -14,14 +14,13 @@ spec:
     spec:
       containers:
         - name: auth
-          image: ticketingapp/auth
+          image: cygnetops/auth
           env:
             - name: JWT_KEY
               valueFrom:
                 secretKeyRef:
                   name: jwt-secret
                   key: JWT_KEY
-
 ---
 apiVersion: v1
 kind: Service
